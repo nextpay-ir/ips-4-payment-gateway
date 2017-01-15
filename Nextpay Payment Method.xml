@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin name="Nextpay Payment Method" version_long="10000" version_human="1.0.0" author="Nextpay" website="http://nextpay.ir" update_check="http://nextpay.ir">
+	<hooks/>
+	<htmlFiles/>
+	<cssFiles/>
+	<jsFiles/>
+	<resourcesFiles/>
+	<lang><word key="gateway__Nextpay" js="0">Nextpay</word><word key="nextpay_api" js="0">شناسه درگاه</word></lang>
+	<versions>
+		<version long="10000" human="1.0.0"><![CDATA[//<?php
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	header( ( isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0' ) . ' 403 Forbidden' );
+	exit;
+}
+
+/**
+ * Install Code
+ */
+class ips_plugins_setup_install
+{
+	/**
+	 * ...
+	 *
+	 * @return	array	If returns TRUE, upgrader will proceed to next step. If it returns any other value, it will set this as the value of the 'extra' GET parameter and rerun this step (useful for loops)
+	 */
+	public function step1()
+	{
+		
+
+		return TRUE;
+	}
+	
+	// You can create as many additional methods (step2, step3, etc.) as is necessary.
+	// Each step will be executed in a new HTTP request
+}]]></version>
+	</versions>
+</plugin>
